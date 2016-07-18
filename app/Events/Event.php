@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace taskapp\Events;
 
 abstract class Event
 {

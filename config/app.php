@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        taskapp\Providers\AppServiceProvider::class,
+        taskapp\Providers\AuthServiceProvider::class,
+        taskapp\Providers\EventServiceProvider::class,
+        taskapp\Providers\RouteServiceProvider::class,
 
     ],
 

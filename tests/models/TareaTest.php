@@ -14,6 +14,15 @@ class TareaTest extends TestCase
 		$tarea = new Tarea;
 		$this->assertEquals(get_class($tarea),'taskapp\Tarea');
 	}
+
+	public function testTodolistRecordCount()
+	{
+	$listFactory = factory('taskapp\Tarea')->create();
+	$lists = Tarea::all();
+	$this->assertEquals($lists->count(), 11);
+	}
+
+
     /**
      * A basic test example.
      *

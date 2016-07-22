@@ -11,7 +11,7 @@ use taskapp\Tarea;
 |
 */
 
-Route::get('/{slug}', function ($slug) {
-	$tarea = Tarea::whereSlug($slug)->first();
+Route::get('/{tarea}', function ( taskapp\Tarea $tarea) {
+	// $tarea = Tarea::whereSlug($slug)->first();
     return view('welcome',['tarea' => $tarea]);
 });

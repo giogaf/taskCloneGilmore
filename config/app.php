@@ -155,7 +155,8 @@ return [
         taskapp\Providers\AuthServiceProvider::class,
         taskapp\Providers\EventServiceProvider::class,
         taskapp\Providers\RouteServiceProvider::class,
-
+        
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
     ],
 
     /*

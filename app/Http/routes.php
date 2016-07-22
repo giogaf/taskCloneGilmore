@@ -1,5 +1,5 @@
 <?php
-
+use taskapp\Tarea;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/{slug}', function ($slug) {
+	$tarea = Tarea::whereSlug($slug)->first();
+    return view('welcome',['tarea' => $tarea]);
 });

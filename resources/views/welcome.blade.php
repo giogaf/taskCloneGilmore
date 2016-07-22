@@ -14,6 +14,7 @@
                 <div class="title">Laravel 5</div>
             </div>
             <a href="http://www.wjgilmore.com" class="btn btn-success">W.J. Gilmore, LLC</a>
+            {{ $tarea->slug }}
         </div>
     </body>
 </html>

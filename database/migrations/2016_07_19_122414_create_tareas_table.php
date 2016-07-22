@@ -14,8 +14,12 @@ class CreateTareasTable extends Migration
     {
         Schema::create('tareas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
-            $table->text('descripcion');
+            $table->string('name');
+            $table->text('description');
+            $table->integer('lista_id')->unsigned();
+            $table->foreign('lista_id')->references('id')->on('listas')->onDelete('cascade');
+            $table->boolean('done')->default('false');            
+            $table->string('slug')->default('');
             $table->softDeletes();
             $table->timestamps();
         });

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddSlugToTareasTable extends Migration
+class CreateListasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,8 +12,11 @@ class AddSlugToTareasTable extends Migration
      */
     public function up()
     {
-        Schema::table('Tareas', function (Blueprint $table) {
-            $table->string('slug')->default('');
+        Schema::create('listas', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->text('description');
+            $table->timestamps();
         });
     }
 
@@ -24,8 +27,6 @@ class AddSlugToTareasTable extends Migration
      */
     public function down()
     {
-        Schema::table('Tareas', function (Blueprint $table) {
-            $table->dropColumn('slug');
-        });
+        Schema::drop('listas');
     }
 }

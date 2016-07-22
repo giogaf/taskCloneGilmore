@@ -13,6 +13,11 @@ class Tarea extends Model
 
     protected $fillable = ['nombre','descripcion'];
 
+    public function lista()
+    {
+        return $this->belongsTo('taskapp\Lista');
+    }
+
     public function sluggable()
     {
     	return [

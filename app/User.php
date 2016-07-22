@@ -7,6 +7,14 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     /**
+     * Defining one-to-one relation Usuario-perfil.
+     */
+    public function profile()
+    {
+        return $this->hasOne('taskapp\Profile');
+    }
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
